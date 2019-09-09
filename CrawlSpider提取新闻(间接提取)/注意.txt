@@ -1,0 +1,8 @@
+  ##你妈的，这里selector.xpath('//item')不用再加.extract(),加了就直接把节点内容直接提取为str格式。！！！
+
+##还有，注意Rule这里，写成：Rule(LinkExtractor(allow=('.*?\.xml',)), callback='parse_items'),
+不是Rule(LinkExtractor(allow=('*\.xml',)), callback='parse_items'),这是对正则式的理解。
+
+#注意版本已经更新，extract() => getall()，extract_first()=>get()
+
+#注意，不能写parse方法，可以写其他的
